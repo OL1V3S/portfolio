@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oliver Triana | Portfolio</title>
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/boot.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <section id="boot-screen" aria-label="Boot sequence">
+    <div class="terminal-window" id="boot-terminal">
+      <div class="terminal-topbar">
+        <span class="terminal-dot"></span>
+        <span class="terminal-dot"></span>
+        <span class="terminal-dot"></span>
+      </div>
+      <div class="terminal-body">
+        <div id="terminal-output"></div>
+        <div class="terminal-line">
+          <span class="prompt">&gt;</span>
+          <span class="cursor"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="portfolio" class="hidden">
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a href="#home" class="logo" aria-label="Go to homepage">
+          <span class="logo-mark">OT</span>
+          <!-- <span class="logo-text">Oliver Triana</span> -->
+        </a>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+        ☰
+        </button>
+      </div>
+    </header>
+
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+
+
+
+        <div class="hero-copy">
+            <p class="hero-heading">Hi, I’m Oliver.</p>
+            <h1 class="hero-intro">I make things. They work. (sometimes)</h1>
+            <!-- <p class="hero-text">
+                I create full-stack applications, polished interfaces, and maintainable systems
+                with a focus on structure, usability, and real engineering intent.
+            </p> -->
+
+            <div class="hero-meta">
+                <span class="meta-chip">Software Developer</span>
+                <span class="meta-chip">CS @ UNL</span>
+                <span class="meta-chip">Frontend + Backend</span>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+        </div>
+
+        <aside class="panel hero-panel" id="hero-panel" aria-label="Developer overview panel">
+          <div class="panel-topbar">
+            <span class="panel-dot"></span>
+            <span class="panel-dot"></span>
+            <span class="panel-dot"></span>
+            <span class="panel-label">overview</span>
+          </div>
+
+          <div class="panel-body">
+            <div class="info-block">
+              <p class="info-label">Role</p>
+              <p class="info-value">Software Developer Intern</p>
+            </div>
+
+            <div class="info-block">
+              <p class="info-label">Focus</p>
+              <p class="info-value">Frontend, backend, and improving existing systems</p>
+            </div>
+
+            <div class="info-block">
+              <p class="info-label">Stack</p>
+              <ul class="stack-list">
+                <li>JavaScript, HTML, CSS</li>
+                <li>React, Vite</li>
+                <li>C#, ASP.NET Core</li>
+                <li>SQL, Entity Framework</li>
+                <li>Java</li>
+              </ul>
+            </div>
+
+            <!-- <div class="status-row">
+              <span class="status-dot"></span>
+              <span>Currently building version 1</span>
+            </div> -->
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container section-stack">
+        <div class="section-heading">
+          <h2 class="section-title">About</h2>
+          <!-- <p class="section-intro">
+            I enjoy building software that feels intentional from both the engineering
+            side and the user side.
+          </p> -->
+        </div>
+
+        <div class="about-grid">
+          <article class="panel">
+            <div class="panel-topbar">
+              <span class="panel-dot"></span>
+              <span class="panel-dot"></span>
+              <span class="panel-dot"></span>
+              <span class="panel-label">summary</span>
+            </div>
+            <div class="panel-body">
+              <p class="section-text">
+                I build software and work on both frontend and backend applications. 
+              </p>
+              <p class="section-text">
+                I try to keep code simple and readable while making things easier to use wherever I can.
+              </p>
+            </div>
+          </article>
+
+          <!--
+
+          <article class="panel">
+            <div class="panel-topbar">
+              <span class="panel-dot"></span>
+              <span class="panel-dot"></span>
+              <span class="panel-dot"></span>
+              <span class="panel-label">about / highlights</span>
+            </div>
+            <div class="panel-body">
+              <ul class="detail-list">
+                <li><span>Strengths</span><strong>UI structure, backend logic, clean code</strong></li>
+                <li><span>Style</span><strong>Modern, practical, maintainable</strong></li>
+                <li><span>Interests</span><strong>Dev tools, polished interfaces, real systems</strong></li>
+              </ul>
+            </div>
+          </article>
+          -->
+
+
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container section-stack">
+        <div class="section-heading">
+          <h2 class="section-title">Projects</h2>
+          <!-- <p class="section-intro">
+            Projects I have worked on.
+          </p>
+        -->
+        </div>
+
+        <!-- <div class="projects-toolbar">
+          <div class="toolbar-label">project index</div>
+        </div> 
+        -->
+
+        <div id="projects-grid" class="projects-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container section-stack">
+        <div class="section-heading">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-intro">
+            Let’s connect about projects, internships, or opportunities.
+          </p>
+        </div>
+
+        <article class="panel contact-panel">
+          <div class="panel-topbar">
+            <span class="panel-dot"></span>
+            <span class="panel-dot"></span>
+            <span class="panel-dot"></span>
+            <span class="panel-label">links</span>
+          </div>
+          <div class="panel-body">
+            <ul class="contact-list">
+              <li>
+                <span class="contact-label">Email</span>
+                <a href="mailto:olivertriana7319@gmail.com">olivertriana7319@gmail.com</a>
+              </li>
+              <li>
+                <span class="contact-label">GitHub</span>
+                <a href="https://github.com/OL1V3S" target="_blank" rel="noopener noreferrer">github.com/OL1V3S</a>
+              </li>
+              <li>
+                <span class="contact-label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/oliver-triana/" target="_blank" rel="noopener noreferrer">linkedin.com/in/oliver-triana/</a>
+              </li>
+              <li>
+                <span class="contact-label">Resume</span>
+                <a href="assets/resume/resume1.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-note">Built with HTML, CSS, and JavaScript</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/boot.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
