@@ -1,0 +1,156 @@
+:root {
+    --bg: #050816;
+    --bg-soft: #0b1026;
+    --panel: rgba(17, 25, 55, 0.84);
+    --panel-2: rgba(22, 34, 74, 0.94);
+  
+    --text: #edf3ff;
+    --muted: #94a3c7;
+    --muted-2: #d5def5;
+  
+    --line: rgba(255, 255, 255, 0.09);
+    --line-strong: rgba(255, 255, 255, 0.16);
+  
+    --accent: #8b5cf6;
+    --accent-2: #06b6d4;
+    --accent-soft: rgba(139, 92, 246, 0.14);
+    --accent-glow: rgba(6, 182, 212, 0.28);
+  
+    --terminal-green: #6ee7b7;
+  
+    --max-width: 1120px;
+    --radius: 15px;
+    --radius-sm: 10px;
+    --shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
+  
+    --mono: "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
+    --sans: Inter, Arial, Helvetica, sans-serif;
+
+    --icon-filter: brightness(0) invert(1);
+  }
+  
+  body[data-theme="light"] {
+    --bg: #f5f7ff;
+    --bg-soft: #e9edff;
+    --panel: rgba(255, 255, 255, 0.86);
+    --panel-2: rgba(255, 255, 255, 0.96);
+  
+    --text: #141827;
+    --muted: #65708a;
+    --muted-2: #252c3f;
+  
+    --line: rgba(20, 24, 39, 0.12);
+    --line-strong: rgba(20, 24, 39, 0.2);
+  
+    --accent: #7c3aed;
+    --accent-2: #0891b2;
+    --accent-soft: rgba(124, 58, 237, 0.12);
+    --accent-glow: rgba(8, 145, 178, 0.22);
+  
+    --shadow: 0 20px 45px rgba(40, 45, 75, 0.14);
+
+    --icon-filter: brightness(0) invert(0);
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+  }
+  
+  body {
+    margin: 0;
+    font-family: var(--sans);
+    color: var(--text);
+    line-height: 1.6;
+    background: linear-gradient(
+      180deg,
+      var(--bg) 0%,
+      var(--bg-soft) 45%,
+      var(--bg) 100%
+    );
+    transition: background 0.45s ease, color 0.35s ease;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+      radial-gradient(circle at 18% 12%, var(--accent-soft), transparent 28%),
+      radial-gradient(circle at 82% 35%, rgba(6, 182, 212, 0.1), transparent 32%),
+      radial-gradient(circle at 50% 85%, rgba(139, 92, 246, 0.08), transparent 34%);
+    transition: background 0.45s ease;
+  }
+  
+  body[data-theme="light"]::before {
+    background:
+      radial-gradient(circle at 18% 12%, rgba(124, 58, 237, 0.12), transparent 28%),
+      radial-gradient(circle at 82% 35%, rgba(8, 145, 178, 0.09), transparent 32%),
+      radial-gradient(circle at 50% 85%, rgba(99, 102, 241, 0.07), transparent 34%);
+  }
+  
+  body[data-theme="light"] .site-header {
+    background: rgba(245, 247, 255, 0.78);
+  }
+  
+  body[data-theme="light"] .btn-primary,
+  body[data-theme="light"] .project-link {
+    color: #fff;
+  }
+  
+  body,
+  .site-header,
+  .panel,
+  .project-card,
+  .btn,
+  .project-link,
+  .theme-toggle,
+  .nav-toggle,
+  .site-nav,
+  .logo-text,
+  .site-nav a {
+    transition:
+      background 0.35s ease,
+      color 0.35s ease,
+      border-color 0.35s ease,
+      box-shadow 0.35s ease,
+      opacity 0.35s ease;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  
+  button,
+  input,
+  textarea {
+    font: inherit;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  #portfolio {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+  
+  ::selection {
+    background: rgba(139, 92, 246, 0.28);
+  }

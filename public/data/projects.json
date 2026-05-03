@@ -1,0 +1,42 @@
+[
+    {
+      "title": "Budget Planner",
+      "type": "Full-Stack Project",
+      "description": "Full-stack budget planning web application with expense tracking and category-based limits, featuring JWT authentication, email verification, and password reset.",
+      "tech": ["React", "ASP.NET Core", "PostgreSQL", "JWT Auth"],
+      "github": "https://github.com/OL1V3S/budget_planner",
+      "live": "https://oli-budget-planner.vercel.app"
+    },
+    {
+      "title": "Church Website",
+      "type": "Frontend Project",
+      "description": "Responsive multi-page website built with React and Vite, featuring clean navigation and cross-device compatibility.",
+      "tech": ["React", "Vite", "JavaScript", "CSS"],
+      "github": "https://github.com/OL1V3S/church_site",
+      "live": "https://templobautista.net"
+    },
+    {
+      "title": "Online Grocery Store App",
+      "type": "Full-Stack Project",
+      "description": "Team-built e-commerce application using ASP.NET Core and Entity Framework with cart, product, and user logic tested using xUnit and SOLID principles.",
+      "tech": ["C#", "ASP.NET Core", "Entity Framework", "xUnit"],
+      "github": "https://github.com/OL1V3S/361_Project",
+      "live": "#"
+    },
+    {
+      "title": "Sales Management System for YRLess",
+      "type": "Backend / Database Project",
+      "description": "Java and SQL application for managing telecom sales, including database design, leasing logic, and JSON/XML data parsing.",
+      "tech": ["Java", "SQL", "JSON", "XML"],
+      "github": "https://github.com/OL1V3S/156_project",
+      "live": "#"
+    },
+    {
+      "title": "To-do List",
+      "type": "Frontend Project",
+      "description": "Task management app with localStorage persistence, built with HTML, CSS, and JavaScript.",
+      "tech": ["HTML", "CSS", "JavaScript", "localStorage"],
+      "github": "https://github.com/OL1V3S/todo_list",
+      "live": "https://ol1v3s.github.io/todo_list"
+    }
+  ]
