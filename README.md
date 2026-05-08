@@ -2,6 +2,9 @@
 
 A portfolio built with React and Vite. The site features a custom dark/light theme, animations, project cards, and UI inspired by terminal/dev environments.
 
+# Host
+Hosted at https://ol1v3s.github.io/portfolio/
+
 ## Tech Stack
 
 - React
