@@ -11,7 +11,7 @@ export default function ProjectCard({ project, index }) {
     <article className={`project-card${project.featured ? " project-featured" : ""}`} data-reveal>
       <div className="project-header">
         <div>
-          <p className="project-number">{String(index + 1).padStart(2, "0")} / {project.featured ? "featured build" : "selected build"}</p>
+          <p className="project-number">{String(index + 1).padStart(2, "0")}</p>
           <p className="project-type">{project.type}</p>
         </div>
         <span className="project-arrow" aria-hidden="true">↗</span>

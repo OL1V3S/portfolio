@@ -5,7 +5,7 @@ const stack = [
   { label: "Backend", items: "ASP.NET Core, Entity Framework Core, REST APIs, Java / JSP" },
   { label: "Frontend", items: "React, Vite" },
   { label: "Data", items: "PostgreSQL, SQL Server, MySQL" },
-  { label: "Engineering", items: "Git, Docker, GitHub Actions, xUnit, ArcGIS" },
+  { label: "Tools", items: "Git, Docker, GitHub Actions, xUnit, ArcGIS" },
 ];
 
 export default function About() {
@@ -15,9 +15,9 @@ export default function About() {
         <SectionHeading index="01" title="About" id="about-title" />
         <div className="about-grid" data-reveal>
           <div className="about-copy">
-            <p className="about-lead">I’m pursuing a B.S. in Computer Science at UNL, graduating in May 2027 with a 3.94 GPA.</p>
-            <p>My work spans backend services, database-backed applications, and the React interfaces around them. I’m currently applying that range in Applications Development at Metropolitan Utilities District and in the Raikes School Design Studio.</p>
-            <p>I’m most interested in backend, full-stack, and general software engineering roles where careful implementation and maintainable systems matter.</p>
+            <p className="about-lead">I’m pursuing a B.S. in Computer Science at UNL, graduating in May 2027 with a 3.93 GPA.</p>
+            <p>My work spans backend services, database-backed applications, and the React interfaces around them. I’m currently applying these skills in Applications Development at Metropolitan Utilities District and in Raikes School Design Studio.</p>
+            <p>I’m most interested in backend, full-stack, and general software engineering roles.</p>
           </div>
           <div className="stack-panel" aria-label="Technical stack">
             <p className="panel-label">core stack</p>
