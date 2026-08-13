@@ -1,50 +1,35 @@
+import SectionHeading from "./SectionHeading";
+
+const links = [
+  { label: "Email", text: "olivertriana7319@gmail.com", href: "mailto:olivertriana7319@gmail.com" },
+  { label: "GitHub", text: "github.com/OL1V3S", href: "https://github.com/OL1V3S", external: true },
+  { label: "LinkedIn", text: "linkedin.com/in/oliver-triana", href: "https://www.linkedin.com/in/oliver-triana/", external: true },
+];
+
 export default function Contact() {
-    return (
-      <section id="contact" className="section">
-        <div className="container section-stack">
-          <div className="section-heading">
-            <h2 className="section-title">Contact</h2>
-            <p className="section-intro">
-              Feel free to reach out or check out my work.
-            </p>
+  return (
+    <section id="contact" className="section section-alt contact-section" aria-labelledby="contact-title">
+      <div className="container">
+        <SectionHeading index="04" title="Let’s build something useful." id="contact-title" />
+        <div className="contact-grid" data-reveal>
+          <div className="contact-copy">
+            <p>I’m seeking full-time software engineering and software development opportunities beginning around May 2027.</p>
+            <a className="btn btn-primary" href="mailto:olivertriana7319@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a>
           </div>
-  
-          <div className="contact-panel panel">
-            <div className="panel-topbar">
-              <span className="panel-dot"></span>
-              <span className="panel-dot"></span>
-              <span className="panel-dot"></span>
-              <span className="panel-label">links</span>
-            </div>
-  
-            <div className="panel-body">
-              <ul className="contact-list">
-                <li>
-                  <span className="contact-label">email</span>
-                  <a href="mailto:olivertriana7319@gmail.com">olivertriana7319@gmail.com</a>
-                </li>
-                <li>
-                  <span className="contact-label">github</span>
-                  <a href="https://github.com/OL1V3S" target="_blank">
-                    github.com/OL1V3S
-                  </a>
-                </li>
-                <li>
-                  <span className="contact-label">linkedin</span>
-                  <a href="https://www.linkedin.com/in/oliver-triana/" target="_blank">
-                  linkedin.com/in/oliver-triana/
-                  </a>
-                </li>
-                <li>
-                    <span className="contact-label">resume</span>
-                    <a href={`${import.meta.env.BASE_URL}resume.pdf`} target="_blank" rel="noreferrer">
-                    View resume
-                    </a>                
-                </li>
-              </ul>
-            </div>
-          </div>
+          <ul className="contact-links">
+            {links.map((link) => (
+              <li key={link.label}>
+                <span>{link.label}</span>
+                <a href={link.href} target={link.external ? "_blank" : undefined} rel={link.external ? "noopener noreferrer" : undefined}>{link.text} {link.external && <span aria-hidden="true">↗</span>}</a>
+              </li>
+            ))}
+            <li>
+              <span>Resume</span>
+              <a href={`${import.meta.env.BASE_URL}resume.pdf`} target="_blank" rel="noopener noreferrer">View PDF <span aria-hidden="true">↗</span></a>
+            </li>
+          </ul>
         </div>
-      </section>
-    );
-  }
+      </div>
+    </section>
+  );
+}

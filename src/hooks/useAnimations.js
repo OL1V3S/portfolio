@@ -2,40 +2,27 @@ import { useEffect } from "react";
 
 export default function useAnimations() {
   useEffect(() => {
+    const elements = document.querySelectorAll("[data-reveal]");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reducedMotion || !("IntersectionObserver" in window)) {
+      elements.forEach((element) => element.classList.add("is-visible"));
+      return undefined;
+    }
+
     const observer = new IntersectionObserver(
-      (entries, obs) => {
+      (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
-            obs.unobserve(entry.target);
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
           }
         });
       },
-      {
-        threshold: 0.15,
-        rootMargin: "0px 0px -40px 0px",
-      }
+      { threshold: 0.12, rootMargin: "0px 0px -48px" },
     );
 
-    function observeElements() {
-      const elements = document.querySelectorAll(
-        ".section-heading, .project-card, .contact-panel, .about-grid .panel"
-      );
-
-      elements.forEach((el) => {
-        if (!el.classList.contains("in-view")) {
-          observer.observe(el);
-        }
-      });
-    }
-
-    observeElements();
-
-    const timeout = setTimeout(observeElements, 300);
-
-    return () => {
-      clearTimeout(timeout);
-      observer.disconnect();
-    };
+    elements.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
   }, []);
 }
