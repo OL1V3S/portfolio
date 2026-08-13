@@ -3,9 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oliver Triana | Portfolio</title>
+    <meta name="description" content="Computer Science student at the University of Nebraska–Lincoln graduating May 2027. Applications Development Intern building full-stack and backend software." />
+    <meta name="theme-color" content="#090c12" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f5f7fa" media="(prefers-color-scheme: light)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Oliver Triana | Software Engineer" />
+    <meta property="og:description" content="Computer Science student at UNL graduating May 2027 and Applications Development Intern building full-stack and backend software." />
+    <meta property="og:url" content="https://ol1v3s.github.io/portfolio/" />
+    <title>Oliver Triana | Software Engineer</title>
+    <script>
+      (() => {
+        let savedTheme;
+        try { savedTheme = localStorage.getItem("theme"); } catch { /* Storage can be unavailable in privacy modes. */ }
+        const preferredTheme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        document.documentElement.dataset.theme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : preferredTheme;
+      })();
+    </script>
   </head>
-
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>

@@ -1,95 +1,32 @@
-# Personal Portfolio
+# Oliver Triana — Portfolio
 
-A portfolio built with React and Vite. The site features a custom dark/light theme, animations, project cards, and UI inspired by terminal/dev environments.
+A recruiting-focused software engineering portfolio built with React, Vite, and custom CSS.
 
-# Host
+## Live site
+
 Hosted at https://ol1v3s.github.io/portfolio/
 
-## Tech Stack
+## Highlights
 
-- React
-- Vite
-- JavaScript
-- Custom CSS
-- HTML
-- SVG icons
+- Responsive “Precision Engineering” visual system with intentional dark and light themes
+- Recruiter-focused hero, about, experience, projects, and contact sections
+- Static, data-driven project cards sourced from `src/data/projects.js`
+- Accessible mobile navigation, theme toggle, focus states, and reduced-motion support
+- GitHub Pages-compatible assets through Vite's `/portfolio/` base path
 
-## Features
-
-- Responsive layout for desktop and mobile
-- Dark and light mode toggle
-- Interactive hero section with profile image
-- About section with tech stack icons
-- Dynamic projects rendered from `projects.json`
-- Project cards with GitHub and live site links
-- Terminal-style boot screen animation
-
-## Project Structure
-
-```txt
-portfolio/
-├── public/
-│   ├── icons/
-│   ├── data/
-│   │   └── projects.json
-│   └── resume.pdf
-│
-├── src/
-│   ├── components/
-│   │   ├── Header.jsx
-│   │   ├── Hero.jsx
-│   │   ├── About.jsx
-│   │   ├── Projects.jsx
-│   │   ├── Contact.jsx
-│   │   ├── Footer.jsx
-│   │   └── BootScreen.jsx
-│   │
-│   ├── hooks/
-│   │   ├── useAnimations.js
-│   │   └── useScrollSpy.js
-│   │
-│   ├── styles/
-│   │   ├── main.css
-│   │   ├── layout.css
-│   │   ├── components.css
-│   │   ├── boot.css
-│   │   └── responsive.css
-│   │
-│   ├── App.jsx
-│   └── main.jsx
-```
-
-## Getting Started
-
-Install dependencies:
+## Local development
 
 ```bash
 npm install
-```
-
-Run the development server:
-
-```bash
 npm run dev
 ```
 
-## Projects
+Create a production build with:
 
-Projects are stored in:
-
-```txt
-public/data/projects.json
+```bash
+npm run build
 ```
 
-Each project includes:
+## Resume
 
-- Title
-- Type
-- Description
-- Tech stack
-- GitHub link
-- Live site link
-
-## Author
-
-Oliver Triana
+The Resume links resolve to `public/resume.pdf` through `import.meta.env.BASE_URL`.

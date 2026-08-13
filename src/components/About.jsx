@@ -1,75 +1,34 @@
-const iconPath = (fileName) => `${import.meta.env.BASE_URL}icons/${fileName}`;
+import SectionHeading from "./SectionHeading";
+
+const stack = [
+  { label: "Languages", items: "Java, C#, Python, C, JavaScript, SQL" },
+  { label: "Backend", items: "ASP.NET Core, Entity Framework Core, REST APIs, Java / JSP" },
+  { label: "Frontend", items: "React, Vite" },
+  { label: "Data", items: "PostgreSQL, SQL Server, MySQL" },
+  { label: "Engineering", items: "Git, Docker, GitHub Actions, xUnit, ArcGIS" },
+];
 
 export default function About() {
   return (
-    <section id="about" className="section">
-      <div className="container section-stack">
-        <div className="section-heading">
-          <h2 className="section-title">About</h2>
-          <p className="section-intro">
-            I’m a Computer Science student at the University of Nebraska–Lincoln
-            interested in building useful, responsive, and well-structured software.
-          </p>
-        </div>
-
-        <div className="about-grid">
-          <div className="panel">
-            <div className="panel-topbar">
-              <span className="panel-dot"></span>
-              <span className="panel-dot"></span>
-              <span className="panel-dot"></span>
-              <span className="panel-label">background</span>
-            </div>
-
-            <div className="panel-body">
-              <p className="section-text">
-                I enjoy working on projects that combine clean design with practical
-                functionality.
-              </p>
-            </div>
+    <section id="about" className="section" aria-labelledby="about-title">
+      <div className="container">
+        <SectionHeading index="01" title="About" id="about-title" />
+        <div className="about-grid" data-reveal>
+          <div className="about-copy">
+            <p className="about-lead">I’m pursuing a B.S. in Computer Science at UNL, graduating in May 2027 with a 3.94 GPA.</p>
+            <p>My work spans backend services, database-backed applications, and the React interfaces around them. I’m currently applying that range in Applications Development at Metropolitan Utilities District and in the Raikes School Design Studio.</p>
+            <p>I’m most interested in backend, full-stack, and general software engineering roles where careful implementation and maintainable systems matter.</p>
           </div>
-
-          <div className="panel">
-            <div className="panel-topbar">
-              <span className="panel-dot"></span>
-              <span className="panel-dot"></span>
-              <span className="panel-dot"></span>
-              <span className="panel-label">stack</span>
-            </div>
-
-            <div className="panel-body">
-              <ul className="stack-list">
-                <li>
-                  <img src={iconPath("react.svg")} alt="React" />
-                  <span>React / Vite / JavaScript</span>
-                </li>
-
-                <li>
-                  <img src={iconPath("dotnet.svg")} alt=".NET" />
-                  <span>C# / ASP.NET Core</span>
-                </li>
-
-                <li>
-                  <img src={iconPath("postgresql.svg")} alt="PostgreSQL" />
-                  <span>PostgreSQL / SQL / Entity Framework</span>
-                </li>
-
-                <li>
-                  <img src={iconPath("java.svg")} alt="Java" />
-                  <span>Java</span>
-                </li>
-
-                <li>
-                  <img src={iconPath("python.svg")} alt="Python" />
-                  <span>Python</span>
-                </li>
-
-                <li>
-                  <img src={iconPath("git.svg")} alt="Git" />
-                  <span>Git</span>
-                </li>
-              </ul>
-            </div>
+          <div className="stack-panel" aria-label="Technical stack">
+            <p className="panel-label">core stack</p>
+            <dl className="stack-list">
+              {stack.map((group) => (
+                <div key={group.label}>
+                  <dt>{group.label}</dt>
+                  <dd>{group.items}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </div>
       </div>

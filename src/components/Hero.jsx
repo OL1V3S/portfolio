@@ -1,76 +1,34 @@
-import { useRef } from "react";
 import me from "../assets/me.jpeg";
 
 export default function Hero() {
-  const imageRef = useRef(null);
-
-  function handleMouseMove(e) {
-    const card = imageRef.current;
-    if (!card) return;
-
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-
-    const rotateX = ((y - centerY) / centerY) * -10;
-    const rotateY = ((x - centerX) / centerX) * 10;
-
-    card.style.setProperty("--x", `${x}px`);
-    card.style.setProperty("--y", `${y}px`);
-    card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
-  }
-
-  function handleMouseLeave() {
-    const card = imageRef.current;
-    if (!card) return;
-
-    card.style.transform =
-      "perspective(900px) rotateX(0deg) rotateY(0deg) scale(1)";
-  }
-
   return (
-    <section id="hero" className="hero">
+    <section id="top" className="hero" aria-labelledby="hero-title">
       <div className="container hero-grid">
-        <div className="hero-copy">
-          <p className="hero-kicker">frontend / full-stack developer</p>
-
-          <h1 className="hero-heading">
-            Oliver <span className="accent-text">Triana</span>
+        <div className="hero-copy" data-reveal>
+          <p className="eyebrow"><span aria-hidden="true">//</span> software engineering · may 2027</p>
+          <h1 id="hero-title" className="hero-heading">
+            Software engineer building <span>reliable full-stack systems.</span>
           </h1>
-
           <p className="hero-subheading">
-            Computer Science student building clean, practical web applications.
+            I’m Oliver Triana, a Computer Science student at the University of
+            Nebraska–Lincoln. I build backend and full-stack software at Metropolitan
+            Utilities District and through Raikes School Design Studio.
           </p>
-
-        {/*
-          <div className="hero-meta">
-            <span className="meta-chip">React + Vite</span>
-            <span className="meta-chip">ASP.NET Core</span>
-            <span className="meta-chip">JavaScript</span>
-          </div>
-        */}
-
           <div className="hero-actions">
-            <a className="btn btn-primary" href="#projects">
-              View Projects
-            </a>
-            <a className="btn btn-secondary" href="#contact">
-              Contact Me
-            </a>
+            <a className="btn btn-primary" href="#projects">View projects <span aria-hidden="true">↘</span></a>
+            <a className="btn btn-secondary" href={`${import.meta.env.BASE_URL}resume.pdf`} target="_blank" rel="noopener noreferrer">Resume <span aria-hidden="true">↗</span></a>
+            <a className="text-link" href="https://github.com/OL1V3S" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
           </div>
         </div>
 
-        <div className="hero-profile-wrap">
-          <div
-            ref={imageRef}
-            className="hero-profile-card"
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-          >
-            <img src={me} alt="Oliver Triana" className="hero-profile-img" />
+        <div className="hero-profile" data-reveal>
+          <div className="profile-frame">
+            <img src={me} alt="Oliver Triana, software engineering student" />
+            <div className="profile-index" aria-hidden="true">OT / 27</div>
+          </div>
+          <div className="availability-note">
+            <span className="status-dot" aria-hidden="true"></span>
+            <span>Seeking full-time software engineering roles beginning May 2027</span>
           </div>
         </div>
       </div>
