@@ -18,11 +18,25 @@ const roles = [
     date: "Aug. 2026 – Present",
     summary: "Selected for a year-long, industry-sponsored software development program working with an external client to design and deliver a production-oriented software solution.",
   },
+  {
+    company: "University of Nebraska–Lincoln",
+    role: "Undergraduate Learning Assistant",
+    date: "Jan. 2026 – May 2026",
+    summary: "Guided students through introductory Python programming, debugging, and problem solving during labs and office hours.",
+    compact: true,
+  },
+  {
+    company: "University of Nebraska–Lincoln",
+    role: "Undergraduate Teaching Assistant — Data Structures & Algorithms",
+    date: "Aug. 2025 – Dec. 2025",
+    summary: "Mentored students on data structures, algorithms, debugging, and complexity analysis during office hours.",
+    compact: true,
+  },
 ];
 
 function ExperienceItem({ item }) {
   return (
-    <article className="experience-item" data-reveal>
+    <article className={`experience-item${item.compact ? " experience-item-compact" : ""}`} data-reveal>
       <div className="experience-meta"><p>{item.date}</p><span aria-hidden="true"></span></div>
       <div className="experience-content">
         <p className="experience-company">{item.company}</p>
@@ -39,7 +53,7 @@ export default function Experience() {
     <section id="experience" className="section section-alt" aria-labelledby="experience-title">
       <div className="container">
         <SectionHeading index="02" title="Experience" id="experience-title" intro="Professional work building software with real users, systems, and delivery constraints." />
-        <div className="experience-list">{roles.map((item) => <ExperienceItem item={item} key={item.company} />)}</div>
+        <div className="experience-list">{roles.map((item) => <ExperienceItem item={item} key={item.role} />)}</div>
       </div>
     </section>
   );

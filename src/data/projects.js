@@ -3,7 +3,7 @@ const projects = [
     title: "Budget Planner",
     type: "Deployed full-stack application",
     featured: true,
-    description: "A production-deployed personal finance application for tracking user-specific expenses, setting category budgets, filtering activity, and understanding spending through visualizations.",
+    description: "A deployed personal finance application for tracking user-specific expenses, setting category budgets, filtering activity, and understanding spending through visualizations.",
     highlights: [
       "ASP.NET Identity and JWT authentication with email confirmation and password reset via the Gmail API",
       "Rate-limited confirmation recovery and account-enumeration-resistant account responses",
@@ -17,7 +17,7 @@ const projects = [
   {
     title: "Templo Bautista Website",
     type: "Production client website",
-    description: "A responsive React website built pro bono for a local church while working directly with stakeholders from requirements through public deployment.",
+    description: "A responsive React website built for a local church while working directly with stakeholders.",
     highlights: [
       "Responsive, production-ready React interface",
       "Automated build and deployment with GitHub Actions",
