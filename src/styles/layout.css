@@ -4,7 +4,7 @@
 }
 
 .section { padding: clamp(5rem, 9vw, 8.5rem) 0; }
-.section-alt { background: color-mix(in srgb, var(--bg-subtle) 88%, transparent); border-block: 1px solid var(--line); }
+.section-alt { border-block: 1px solid var(--line); }
 
 .section-heading {
   display: grid;
@@ -102,5 +102,5 @@
   margin-left: 4.75rem;
 }
 
-.site-footer { padding: 2rem 0; border-top: 1px solid var(--line); background: var(--bg); }
+.site-footer { padding: 2rem 0; border-top: 1px solid var(--line); }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; }
